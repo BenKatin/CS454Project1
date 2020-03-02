@@ -1,5 +1,5 @@
 from array import *
-import numpy
+#import numpy
 import sys
 
 def Part1(n):
