@@ -1,3 +1,3 @@
-from Project1 import Part1
+from Problem1 import Part1
 
-print(Part1(2))
+print(Part1(56))
