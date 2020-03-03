@@ -2,15 +2,17 @@ from array import *
 import numpy
 import sys
 
-def Part1(n):
+def Count(n):
     numpy.set_printoptions(threshold=sys.maxsize)
     dt = numpy.dtype(('U', 10))
 
     DFAtable = GenerateDFATable()
 
-    RecTable = numpy.zeros([1024,2])
+    RecTable = []
+    for i in range(1024):
+        RecTable.append([0] * 2)
 
-    recRows = RecTable.shape[0]
+    recRows = len(RecTable)
 
 
     for x in range(recRows):
@@ -78,6 +80,7 @@ def RecurrenceStep(RecTable, DFA):
 
         RecTable[x][1] = sum
 
-    RecTable[:,[0, 1]] = RecTable[:,[1, 0]]
+    for sublist in RecTable:
+        sublist[0], sublist[1] = sublist[1], sublist[0]
 
     return RecTable
