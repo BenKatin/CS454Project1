@@ -1,8 +1,6 @@
 from Problem1 import Count
 from Problem2 import smallestMultiple
 
-print(Count(6))
 
-
-#parent = smallestMultiple(26147, [1,3])
+smallestMultiple(104,[2,5,9])
 
